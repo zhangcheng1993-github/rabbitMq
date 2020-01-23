@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: rabbitMqProducer
+  rabbitmq:
+    addresses: 127.0.0.1:5672   #mq服务器地址
+    username: zhangcheng        #账号
+    password: 00000000          #密码
+    virtual-host: /             #virtual-host路径
+    publisher-confirms: true    #是否开启确认模式
+    publisher-returns: true     #是否开启返回模式
+    template:
+      mandatory: true
+server:
+  port: 8081
+

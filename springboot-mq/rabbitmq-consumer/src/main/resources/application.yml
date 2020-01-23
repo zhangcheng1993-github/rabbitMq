@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: rabbitMqConsumer
+  rabbitmq:
+    addresses: 127.0.0.1:5672   #mq服务器地址
+    username: zhangcheng        #账号
+    password: 00000000          #密码
+    virtual-host: /             #virtual-host路径
+    listener:
+      simple:
+        acknowledge-mode: manual #手动签收消息
+        concurrency: 1           #默认一次消费1条
+        max-concurrency: 10      #最多消费10条
+server:
+  port: 8082
